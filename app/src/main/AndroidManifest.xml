@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.royalroadofspec">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="스펙의 왕도"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RoyalRoadOfSpec">
+        <activity android:name=".community_space_4"></activity>
+        <activity
+            android:name=".details_of_selected_field_3"
+            android:parentActivityName=".selecting_subfield_content_2"/>
+        <activity
+            android:name=".selecting_subfield_content_2"
+            android:parentActivityName=".selecting_occupation_1"/>
+        <activity android:name=".selecting_occupation_1" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
