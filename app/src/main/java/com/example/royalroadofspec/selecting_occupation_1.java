@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class selecting_occupation_1 extends AppCompatActivity {
 
@@ -24,5 +25,17 @@ public class selecting_occupation_1 extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void SearchClicked(View v){ //검색 버튼 클릭 시 2번째 화면으로 이동
+        Intent myIntent = new Intent(getApplicationContext(), selecting_subfield_content_2.class);
+        startActivity(myIntent);
+        //Toast.makeText(getApplicationContext(), "이동", Toast.LENGTH_LONG).show();
+    }
+
+    public void CommunityClicked(View v){ //community 버튼 클릭 시 community 화면으로 이동
+        Intent myIntent = new Intent(getApplicationContext(), community_space_4.class);
+        startActivity(myIntent);
+        //Toast.makeText(getApplicationContext(), "이동", Toast.LENGTH_LONG).show();
     }
 }
