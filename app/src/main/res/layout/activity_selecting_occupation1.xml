@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".selecting_occupation_1">
 
+<!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,7 +14,7 @@
         tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="356dp"
         tools:ignore="MissingConstraints" />
-
+-->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
@@ -76,4 +77,17 @@
         app:layout_constraintVertical_bias="0.976"
          />
 
+    <Button
+        android:id="@+id/etc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="EtcClicked"
+        android:text="Etc"
+        app:layout_constraintBottom_toTopOf="@id/community"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
