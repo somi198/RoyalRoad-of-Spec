@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="15sp"
-        android:backgroundTint="#9370DB"
+        android:backgroundTint="@color/spec"
         android:src="@drawable/baseline_mode_edit_white_48"
         app:backgroundTint="#00FFFFFF" />
 
