@@ -6,6 +6,247 @@
     android:layout_height="match_parent"
     tools:context=".details_of_selected_field_3">
 
+    <TabHost
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@android:id/tabhost"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.TabDetails.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:popupTheme="@style/Theme.TabDetails.PopupOverlay" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="410dp"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="416dp"
+                android:layout_height="614dp">
+
+                <LinearLayout
+                    android:id="@+id/tabSong"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:fontFamily="@font/nanumgodic"
+                        android:gravity="center"
+                        android:background="@color/purple_200"
+                        android:text="프론트엔드 개발자" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="193dp"
+                        android:fontFamily="@font/nanumgodic"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="백엔드 API에서 가져온 데이터의 출력, 입력을 통한 비지니스 로직 구성과 사용자와 대화하는 사용자 인터페이스 부분을 작업하는 개발자를 말한다.\n\n프론트엔드 개발자는 프론트 영역 전반과 서버에 대한 이해력을 필요로 한다. 프론트엔드 개발자가 담당하기도 하지만, 종종 업무 효율을 위해 디자인 영역(HTML, CSS)만 작업해주는 마크업 개발자가따로 있는 경우도 있으며, 프론트엔드 개발자는 해당 작업 파일을 받아 포팅 작업을 하고, 프론트엔드 영역을 개발하게 된다\n\n즉 프론트엔드 개발자는 바닐라 JS와 HTTP 프로토콜, 웹팩 등이 중요하다고 볼 수 있다." />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:fontFamily="@font/nanumgodic"
+                        android:gravity="center"
+                        android:background="@color/purple_200"
+                        android:text="추천 커리 큘럼" />
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumgodic"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="C언어 -> JavaScript -> HTTP, SQL -> 프로토콜, 웹팩" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:fontFamily="@font/nanumgodic"
+                        android:gravity="center"
+                        android:background="@color/purple_200"
+                        android:text="자격증" />
+
+                    <Button
+                        android:id="@+id/button12"
+                        android:layout_width="match_parent"
+                        android:layout_height="81dp"
+                        android:background="@drawable/_0210602_020036"
+                        android:onClick="botton10" />
+
+                    <Button
+                        android:id="@+id/button13"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:background="@drawable/_0210602_020143"
+                        android:onClick="botton11" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabArtist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/nanumgodic"
+                        android:gravity="center"
+                        android:background="@color/purple_200"
+                        android:text="온라인 강의 추천 사이트" />
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="@drawable/_0210601_150453"
+                        android:onClick="botton1" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/nanumgodic"
+                        android:gravity="center"
+                        android:background="@color/purple_200"
+                        android:text="오프라인 강의 추천 사이트" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:background="@drawable/_0210601_150540"
+                        android:onClick="botton2" />
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:background="@drawable/_0210602_003818"
+                        android:onClick="botton3" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/nanumgodic"
+                        android:gravity="center"
+                        android:background="@color/purple_200"
+                        android:text="독학 교재 추천" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button5"
+                            android:layout_width="136dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/_0210602_004259"
+                            android:onClick="botton4" />
+
+                        <Button
+                            android:id="@+id/button7"
+                            android:layout_width="136dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/_0210602_004239"
+                            android:onClick="botton5" />
+
+                        <Button
+                            android:id="@+id/button8"
+                            android:layout_width="136dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/_0210602_004225"
+                            android:onClick="botton6" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabAlbum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:fontFamily="@font/nanumgodic"
+                        android:gravity="center"
+                        android:background="@color/purple_200"
+                        android:text="동아리" />
+
+                    <Button
+                        android:id="@+id/button9"
+                        android:layout_width="match_parent"
+                        android:layout_height="213dp"
+                        android:background="@drawable/_0210601_145519"
+                        android:onClick="botton7" />
+
+                    <Button
+                        android:id="@+id/button10"
+                        android:layout_width="match_parent"
+                        android:layout_height="105dp"
+                        android:background="@drawable/_0210601_145129"
+                        android:onClick="botton8" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:fontFamily="@font/nanumgodic"
+                        android:gravity="center"
+                        android:background="@color/purple_200"
+                        android:text="공모전" />
+
+                    <Button
+                        android:id="@+id/button11"
+                        android:layout_width="match_parent"
+                        android:layout_height="213dp"
+                        android:background="@drawable/_20210602_011705"
+                        android:onClick="botton9" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </TabHost>
 
     <TextView
         android:layout_width="wrap_content"
