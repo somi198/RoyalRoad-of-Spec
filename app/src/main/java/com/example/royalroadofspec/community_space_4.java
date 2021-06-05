@@ -70,9 +70,11 @@ public class community_space_4 extends AppCompatActivity {
         QaAdapter.addItem("학원 추천받아요",date,"somi", "2", "1");
 
 
+
         InfoView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
-            public void onItemClick(AdapterView parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ListBoardItem item = (ListBoardItem) parent.getItemAtPosition(position);
 
                 String titleStr = item.getTitle();
@@ -81,8 +83,45 @@ public class community_space_4 extends AppCompatActivity {
                 String likeStr = item.getLike();
                 String chatStr = item.getChat();
 
+
+                Intent intent = new Intent(getApplicationContext(), community_detail.class);
+
+                intent.putExtra("title", titleStr);
+                intent.putExtra("time", timeStr);
+                intent.putExtra("name", nameStr);
+                intent.putExtra("like", likeStr);
+                intent.putExtra("chat", chatStr);
+                intent.putExtra("board", "정보게시판 >");
+                startActivity(intent);
+
             }
         });
+
+        QaView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ListBoardItem item = (ListBoardItem) parent.getItemAtPosition(position);
+
+                String titleStr = item.getTitle();
+                String timeStr = item.getTime();
+                String nameStr = item.getName();
+                String likeStr = item.getLike();
+                String chatStr = item.getChat();
+
+
+                Intent intent = new Intent(getApplicationContext(), community_detail.class);
+
+                intent.putExtra("title", titleStr);
+                intent.putExtra("time", timeStr);
+                intent.putExtra("name", nameStr);
+                intent.putExtra("like", likeStr);
+                intent.putExtra("chat", chatStr);
+                intent.putExtra("board", "질문게시판 >");
+                startActivity(intent);
+            }
+        });
+
+
 
         writeButton.setOnClickListener(new View.OnClickListener() {
             @Override
