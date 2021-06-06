@@ -145,6 +145,8 @@ public class community_space_4 extends AppCompatActivity {
 
     }
 
+
+
     // Action Bar에 메뉴를 생성한다
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

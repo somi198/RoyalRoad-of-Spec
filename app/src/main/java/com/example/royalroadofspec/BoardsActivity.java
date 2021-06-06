@@ -1,35 +1,52 @@
 package com.example.royalroadofspec;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
 public class BoardsActivity extends AppCompatActivity {
 
     EditText et_board_title, et_board_content, et_board_userName;
+    SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
+    String category="정보게시판";
     Button btn_save;
+    Integer likes = 0;
+    Integer comments = 0;
+    long now = System.currentTimeMillis();
+    Date date = new Date(now);
 
     private DatabaseReference mDatabase;
+    private FirebaseDatabase mFirebase;
+    private ChildEventListener mChild;
 
-
-    private String uid = "";
-
+    private ListView listView;
+    private ArrayAdapter<String> adapter;
+    List<Object> boardList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +61,17 @@ public class BoardsActivity extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        readBoard();
+
+        ListView TestList;
+        ListBoardAdapter TestAdapter;
+        TestAdapter = new ListBoardAdapter();
+        TestList = (ListView) findViewById(R.id.testList);
+        TestList.setAdapter(TestAdapter);
+
+
+        readBoard(TestAdapter);
+        readBoardList();
+
 
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,13 +85,13 @@ public class BoardsActivity extends AppCompatActivity {
                 result.put("content", getBoardContent);
                 result.put("userName", getBoardUserName);
 
-                writeNewBoard(getBoardTitle, getBoardContent, getBoardUserName);
+                writeNewBoard(getBoardTitle, getBoardContent, getBoardUserName, category,simpleDate.format(date), likes, comments);
             }
         });
     }
 
-    private void writeNewBoard(String title, String content, String userName){
-        Board board = new Board(title, content, userName);
+    private void writeNewBoard(String title, String content, String userName, String category, String date, Integer likes, Integer comments){
+        Board board = new Board(title, content, userName, category, date, likes, comments);
 
         mDatabase.child("boards").push().setValue(board)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -80,17 +107,62 @@ public class BoardsActivity extends AppCompatActivity {
                     }
                 });
     }
+    private void readBoardList(){
+//        mFirebase = FirebaseDatabase.getInstance();
+//        mDatabase = mFirebase.getReference("log");
+//        mDatabase.child("log").setValue("check")
 
-    private void readBoard(){
-        mDatabase.child("boards").child(uid).addValueEventListener(new ValueEventListener() {
+        mDatabase.addChildEventListener(new ChildEventListener() {
+
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                Log.d("FirebaseData","onChildAdded:"+ snapshot.getValue());
+//                Board board = snapshot.getValue(Board.class);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                Log.d("FirebaseData","onChildChanged:" + snapshot.getKey());
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+    protected void onDestroy() {
+        super.onDestroy();
+        mDatabase.removeEventListener(mChild);
+    }
+
+    private void readBoard(ListBoardAdapter TestAdapter){
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+
+        mDatabase.child("boards").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.getValue(Board.class) != null){
-                    Board post = snapshot.getValue(Board.class);
-                    Log.w("FireBaseData", "getData"+ post.toString());
-                } else {
-                    Toast.makeText(BoardsActivity.this, "데이터 없음..", Toast.LENGTH_SHORT).show();
+                for (DataSnapshot boardSnapshot : snapshot.getChildren()){
+                    String titleStr = boardSnapshot.child("title").getValue(String.class);
+                    String nameStr = boardSnapshot.child("userName").getValue(String.class);
+
+                    TestAdapter.addItem(titleStr, date, nameStr, "4", "8");
+                    Log.i("TAG: value is ",titleStr+"/"+nameStr);
+                    boardList.add(titleStr);
                 }
+                TestAdapter.notifyDataSetChanged();
             }
 
             @Override
