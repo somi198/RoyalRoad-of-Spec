@@ -2,7 +2,6 @@ package com.example.royalroadofspec;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,14 +10,14 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ITListView extends AppCompatActivity {
+public class ITListView_2 extends AppCompatActivity {
 
     static  String[] IT_LIST = {"프론트엔드 개발자", "정보보안 전문가", "데이터베이스 관리자"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.it_listview);
+        setContentView(R.layout.it_listview_2);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, IT_LIST);
 
@@ -44,11 +43,11 @@ public class ITListView extends AppCompatActivity {
                     startActivity(myIntent);
                 }
                 if(strText == IT_LIST[1]){
-                    Intent myIntent = new Intent(getApplicationContext(), Preparing.class);
+                    Intent myIntent = new Intent(getApplicationContext(), Preparing_3.class);
                     startActivity(myIntent);
                 }
                 if(strText == IT_LIST[2]){
-                    Intent myIntent = new Intent(getApplicationContext(), Preparing.class);
+                    Intent myIntent = new Intent(getApplicationContext(), Preparing_3.class);
                     startActivity(myIntent);
                 }
             }

@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +25,7 @@ public class community_space_4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_community_space4);
+        setContentView(R.layout.activity_community_space_4);
 
         Button button = (Button) findViewById(R.id.newActivity);
         button.setOnClickListener(new View.OnClickListener() {
@@ -61,11 +60,11 @@ public class community_space_4 extends AppCompatActivity {
         //ListView
         ListView InfoView;
         ListView QaView;
-        ListBoardAdapter InfoAdapter;
-        ListBoardAdapter QaAdapter;
+        ListBoardAdapter_4 InfoAdapter;
+        ListBoardAdapter_4 QaAdapter;
 
-        InfoAdapter = new ListBoardAdapter();
-        QaAdapter = new ListBoardAdapter();
+        InfoAdapter = new ListBoardAdapter_4();
+        QaAdapter = new ListBoardAdapter_4();
 
         InfoView = (ListView) findViewById(R.id.infoList);
         QaView = (ListView) findViewById(R.id.questionList);
@@ -86,7 +85,7 @@ public class community_space_4 extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ListBoardItem item = (ListBoardItem) parent.getItemAtPosition(position);
+                ListBoardItem_4 item = (ListBoardItem_4) parent.getItemAtPosition(position);
 
                 String titleStr = item.getTitle();
                 String timeStr = item.getTime();
@@ -95,7 +94,7 @@ public class community_space_4 extends AppCompatActivity {
                 String chatStr = item.getChat();
 
 
-                Intent intent = new Intent(getApplicationContext(), community_detail.class);
+                Intent intent = new Intent(getApplicationContext(), community_detail_4.class);
 
                 intent.putExtra("title", titleStr);
                 intent.putExtra("time", timeStr);
@@ -111,7 +110,7 @@ public class community_space_4 extends AppCompatActivity {
         QaView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ListBoardItem item = (ListBoardItem) parent.getItemAtPosition(position);
+                ListBoardItem_4 item = (ListBoardItem_4) parent.getItemAtPosition(position);
 
                 String titleStr = item.getTitle();
                 String timeStr = item.getTime();
@@ -120,7 +119,7 @@ public class community_space_4 extends AppCompatActivity {
                 String chatStr = item.getChat();
 
 
-                Intent intent = new Intent(getApplicationContext(), community_detail.class);
+                Intent intent = new Intent(getApplicationContext(), community_detail_4.class);
 
                 intent.putExtra("title", titleStr);
                 intent.putExtra("time", timeStr);
@@ -137,7 +136,7 @@ public class community_space_4 extends AppCompatActivity {
         writeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), write_space.class);
+                Intent intent = new Intent(getApplicationContext(), write_space_4.class);
                 startActivity(intent);
                 //Toast.makeText(getActivity(), "button1: 글을 작성합니다.", Toast.LENGTH_SHORT).show();
             }
