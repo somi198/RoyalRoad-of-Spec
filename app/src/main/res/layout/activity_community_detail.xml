@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".community_detail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/detail_board"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:text="게시판 >"
+                android:textSize="12dp"
+                android:textColor="@color/spec"/>
+
+            <TextView
+                android:id="@+id/detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="제목"
+                android:textSize="23dp"
+                android:textColor="#000000"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/baseline_account_circle_black_48"
+                    app:backgroundTint="@color/hufs"/>
+
+                <TextView
+                    android:id="@+id/detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/profileImage"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="사용자이름"
+                    android:textSize="13dp"
+                    android:textColor="@color/hufs"/>
+
+                <TextView
+                    android:id="@+id/detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/profileImage"
+                    android:layout_below="@id/detail_name"
+                    android:layout_marginLeft="10dp"
+                    android:text="2021.06.05  16:04"
+                    android:textSize="11dp"
+                    android:textColor="#778899"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_name"
+                    android:layout_toRightOf="@id/detail_date"
+                    android:layout_marginLeft="15dp"
+                    android:text="조회 3"
+                    android:textSize="11dp"
+                    android:textColor="#778899"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/Divider"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="50dp"
+                android:text="세부 내용"
+                android:textSize="15dp"/>
+
+
+            <View
+                style="@style/Divider"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/LikeButton"
+                    android:layout_width="28dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/baseline_favorite_border_black_48"
+                    app:backgroundTint="@color/hufs" />
+
+                <Button
+                    android:id="@+id/ChatButton"
+                    android:layout_width="28dp"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/LikeButton"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/baseline_chat_bubble_outline_black_48"
+                    android:tint="@color/hufs"
+                    app:backgroundTint="@color/hufs" />
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
