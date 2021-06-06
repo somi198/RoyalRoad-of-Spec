@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".details_of_selected_field_3">
+    tools:context=".details_of_selected_field_3_police">
 
     <TabHost
         android:layout_width="wrap_content"
@@ -56,7 +56,7 @@
                         android:fontFamily="@font/nanumgodic"
                         android:gravity="center"
                         android:background="@color/yellow"
-                        android:text="프론트엔드 개발자" />
+                        android:text="경찰 공무원" />
 
                     <TextView
                         android:id="@+id/textView25"
@@ -67,7 +67,7 @@
                         android:layout_marginBottom="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:text="백엔드 API에서 가져온 데이터의 출력, 입력을 통한 비지니스 로직 구성과 사용자와 대화하는 사용자 인터페이스 부분을 작업하는 개발자를 말한다.\n\n프론트엔드 개발자는 프론트 영역 전반과 서버에 대한 이해력을 필요로 한다. 프론트엔드 개발자가 담당하기도 하지만, 종종 업무 효율을 위해 디자인 영역(HTML, CSS)만 작업해주는 마크업 개발자가따로 있는 경우도 있으며, 프론트엔드 개발자는 해당 작업 파일을 받아 포팅 작업을 하고, 프론트엔드 영역을 개발하게 된다\n\n즉 프론트엔드 개발자는 바닐라 JS와 HTTP 프로토콜, 웹팩 등이 중요하다고 볼 수 있다." />
+                        android:text="행정안전부 산하 대한민국 경찰청, 해양수산부 산하 대한민국 해양경찰청에 소속된 특정직 공무원이다.\n\n이 항목에서는 대한민국 검찰청의 지명을 받아 한정된 분야에서만 경찰권을 행사하는 특별사법경찰관리가 아닌, 경찰권의 행사범위에 제약이 없는 일반사법경찰관리를 다룬다.\n\n어디까지나 강학상에서나 행정경찰과 사법경찰(경찰수사관)이 구분되는거지 대한민국 형사소송법이나 경찰공무원법, 경찰법, 경찰관 직무집행법에서는 그 둘을 구분하지 않으며 권한 자체는 동일하다."/>
 
                     <TextView
                         android:id="@+id/textView26"
@@ -88,7 +88,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:gravity="center"
-                        android:text="C언어 -> JavaScript -> HTTP, SQL -> 프로토콜, 웹팩" />
+                        android:text="영어, 한국사 자격증 대체-> 형사법 -> 경찰학개론 -> 헌법" />
 
                     <TextView
                         android:id="@+id/textView28"
@@ -103,14 +103,14 @@
                         android:id="@+id/button12"
                         android:layout_width="match_parent"
                         android:layout_height="81dp"
-                        android:background="@drawable/_0210602_020036"
+                        android:background="@drawable/_20210606_140715"
                         android:onClick="botton10" />
 
                     <Button
                         android:id="@+id/button13"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
-                        android:background="@drawable/_0210602_020143"
+                        android:background="@drawable/_20210606_140642"
                         android:onClick="botton11" />
                 </LinearLayout>
 
@@ -127,13 +127,13 @@
                         android:fontFamily="@font/nanumgodic"
                         android:gravity="center"
                         android:background="@color/yellow"
-                        android:text="온라인 강의 추천 사이트(↓CLICK) " />
+                        android:text="온라인 강의 추천 사이트(↓CLICK)" />
 
                     <Button
                         android:id="@+id/button1"
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
-                        android:background="@drawable/_0210601_150453"
+                        android:background="@drawable/_20210606_140556"
                         android:onClick="botton1" />
 
                     <TextView
@@ -149,14 +149,14 @@
                         android:id="@+id/button2"
                         android:layout_width="match_parent"
                         android:layout_height="85dp"
-                        android:background="@drawable/_0210601_150540"
+                        android:background="@drawable/_20210606_140514"
                         android:onClick="botton2" />
 
                     <Button
                         android:id="@+id/button4"
                         android:layout_width="match_parent"
                         android:layout_height="85dp"
-                        android:background="@drawable/_0210602_003818"
+                        android:background="@drawable/_20210606_140440"
                         android:onClick="botton3" />
 
                     <TextView
@@ -177,21 +177,21 @@
                             android:id="@+id/button5"
                             android:layout_width="136dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/_0210602_004259"
+                            android:background="@drawable/_20210606_140832"
                             android:onClick="botton4" />
 
                         <Button
                             android:id="@+id/button7"
                             android:layout_width="136dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/_0210602_004239"
+                            android:background="@drawable/_20210606_140851"
                             android:onClick="botton5" />
 
                         <Button
                             android:id="@+id/button8"
                             android:layout_width="136dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/_0210602_004225"
+                            android:background="@drawable/_20210606_141021"
                             android:onClick="botton6" />
                     </LinearLayout>
 
@@ -216,14 +216,14 @@
                         android:id="@+id/button9"
                         android:layout_width="match_parent"
                         android:layout_height="213dp"
-                        android:background="@drawable/_0210601_145519"
+                        android:background="@drawable/_20210606_141320"
                         android:onClick="botton7" />
 
                     <Button
                         android:id="@+id/button10"
                         android:layout_width="match_parent"
                         android:layout_height="105dp"
-                        android:background="@drawable/_0210601_145129"
+                        android:background="@drawable/_20210606_141228"
                         android:onClick="botton8" />
 
                     <TextView
@@ -239,7 +239,7 @@
                         android:id="@+id/button11"
                         android:layout_width="match_parent"
                         android:layout_height="213dp"
-                        android:background="@drawable/_20210602_011705"
+                        android:background="@drawable/_20210606_141426"
                         android:onClick="botton9" />
                 </LinearLayout>
 

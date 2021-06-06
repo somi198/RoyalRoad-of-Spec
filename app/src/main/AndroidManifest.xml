@@ -9,11 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoyalRoadOfSpec">
-        <activity android:name=".write_space"></activity>
+        <activity android:name=".community_detail"></activity>
+        <activity android:name=".write_space" />
         <activity android:name=".community_space_4" />
         <activity
             android:name=".details_of_selected_field_3"
             android:parentActivityName=".selecting_subfield_content_2" />
+        <activity android:name=".Preparing"></activity>
+        <activity
+            android:name=".ITListView"
+            android:parentActivityName=".selecting_occupation_1"/>
+        <activity
+            android:name=".OfficerListView"
+            android:parentActivityName=".selecting_occupation_1"/>
+        <activity
+            android:name=".FinanceListView"
+            android:parentActivityName=".selecting_occupation_1"/>
         <activity
         android:name=".InfoAboutSpec"
         android:parentActivityName=".selecting_occupation_1" />
