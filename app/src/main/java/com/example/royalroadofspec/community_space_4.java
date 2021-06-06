@@ -2,7 +2,6 @@ package com.example.royalroadofspec;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.icu.text.IDNA;
 import android.os.Bundle;
