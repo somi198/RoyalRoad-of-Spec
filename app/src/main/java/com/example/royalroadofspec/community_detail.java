@@ -2,19 +2,28 @@ package com.example.royalroadofspec;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 
 public class community_detail extends AppCompatActivity {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.  HH:mm");
+    boolean click = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_community_detail);
+        Button LikeButton = (Button) findViewById(R.id.LikeButton);
+        Button ChatButton = (Button) findViewById(R.id.ChatButton);
 
 
         Intent intent = getIntent();
@@ -27,6 +36,22 @@ public class community_detail extends AppCompatActivity {
         title.setText(intent.getStringExtra("title"));
         name.setText(intent.getStringExtra("name"));
         board.setText(intent.getStringExtra("board"));
+
+
+        LikeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (click == false) {
+                    Drawable fullheart = (Drawable) getResources().getDrawable(R.drawable.baseline_favorite_black_48);
+                    LikeButton.setBackground(fullheart);
+                    click = true;
+                } else {
+                    Drawable emptyheart = (Drawable) getResources().getDrawable(R.drawable.baseline_favorite_border_black_48);
+                    LikeButton.setBackground(emptyheart);
+                    click = false;
+                }
+            }
+        });
 
     }
 }
