@@ -15,6 +15,9 @@
             android:name=".details_of_selected_field_3"
             android:parentActivityName=".selecting_subfield_content_2" />
         <activity
+        android:name=".InfoAboutSpec"
+        android:parentActivityName=".selecting_occupation_1" />
+        <activity
             android:name=".selecting_subfield_content_2"
             android:parentActivityName=".selecting_occupation_1" />
         <activity android:name=".selecting_occupation_1" />
