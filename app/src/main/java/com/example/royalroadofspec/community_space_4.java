@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.Toast;
@@ -26,6 +27,16 @@ public class community_space_4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_community_space4);
+
+        Button button = (Button) findViewById(R.id.newActivity);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), BoardsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         FloatingActionButton writeButton = (FloatingActionButton) findViewById(R.id.fab);
 
