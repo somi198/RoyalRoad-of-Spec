@@ -1,24 +1,21 @@
 package com.example.royalroadofspec;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TabHost;
-import android.app.ActionBar;
 import android.app.TabActivity;
 
 @SuppressWarnings("deprecation")
 
-public class InfoAboutSpec extends TabActivity {
+public class InfoAboutSpec_5 extends TabActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info_about_spec);
+        setContentView(R.layout.activity_info_about_spec_5);
 
         Button button = (Button) findViewById(R.id.newActivity);
         button.setOnClickListener(new View.OnClickListener() {
@@ -30,9 +27,7 @@ public class InfoAboutSpec extends TabActivity {
             }
         });
 
-
         TabHost tabHost = getTabHost();
-
 
         TabHost.TabSpec tabEmploy = tabHost.newTabSpec("EMPLOYMENT").setIndicator("취업");
         tabEmploy.setContent(R.id.employmentTab);

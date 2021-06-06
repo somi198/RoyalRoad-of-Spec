@@ -12,7 +12,7 @@ public class selecting_subfield_content_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selecting_subfield_content2);
+        setContentView(R.layout.activity_selecting_subfield_content_2);
 
         Button button = (Button) findViewById(R.id.newActivity);
         button.setOnClickListener(new View.OnClickListener(){

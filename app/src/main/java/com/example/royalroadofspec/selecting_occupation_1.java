@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class selecting_occupation_1 extends AppCompatActivity {
 
@@ -18,7 +17,7 @@ public class selecting_occupation_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selecting_occupation1);
+        setContentView(R.layout.activity_selecting_occupation_1);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, JOB_LIST);
 
@@ -40,17 +39,17 @@ public class selecting_occupation_1 extends AppCompatActivity {
                 String strText = (String) parent.getItemAtPosition(position);
                 //TODO
                 if(strText == JOB_LIST[0]){
-                    Intent myIntent = new Intent(getApplicationContext(), ITListView.class);
+                    Intent myIntent = new Intent(getApplicationContext(), ITListView_2.class);
                     startActivity(myIntent);
                     //Toast.makeText(getApplicationContext(), "IT 클릭", Toast.LENGTH_SHORT).show();
                 }
                 if(strText == JOB_LIST[1]){
-                    Intent myIntent = new Intent(getApplicationContext(), OfficerListView.class);
+                    Intent myIntent = new Intent(getApplicationContext(), OfficerListView_2.class);
                     startActivity(myIntent);
                     //Toast.makeText(getApplicationContext(), "공무원 클릭", Toast.LENGTH_SHORT).show();
                 }
                 if(strText == JOB_LIST[2]){
-                    Intent myIntent = new Intent(getApplicationContext(), FinanceListView.class);
+                    Intent myIntent = new Intent(getApplicationContext(), FinanceListView_2.class);
                     startActivity(myIntent);
                     //Toast.makeText(getApplicationContext(), "금융업 클릭", Toast.LENGTH_SHORT).show();
                 }
@@ -68,7 +67,7 @@ public class selecting_occupation_1 extends AppCompatActivity {
     }
 
     public void EtcClicked(View v){ //community 버튼 클릭 시 community 화면으로 이동
-        Intent myIntent = new Intent(getApplicationContext(), Preparing.class); //page5로 변경
+        Intent myIntent = new Intent(getApplicationContext(), InfoAboutSpec_5.class); //page5로 변경
         startActivity(myIntent);
         //Toast.makeText(getApplicationContext(), "이동", Toast.LENGTH_LONG).show();
     }
