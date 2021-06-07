@@ -3,7 +3,7 @@ package com.example.royalroadofspec;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ListBoardItem {
+public class ListBoardItem_4 {
     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 
     private String title;
@@ -14,11 +14,11 @@ public class ListBoardItem {
     private Integer likes;
     private Integer comments;
 
-    public ListBoardItem(){
+    public ListBoardItem_4(){
 
     }
 
-    public ListBoardItem(String title, String content, String userName, String category, String date, Integer likes, Integer comments){
+    public ListBoardItem_4(String title, String content, String userName, String category, String date, Integer likes, Integer comments){
         this.title = title;
         this.content = content;
         this.userName = userName;

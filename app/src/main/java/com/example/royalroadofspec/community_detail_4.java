@@ -2,26 +2,23 @@ package com.example.royalroadofspec;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 
-public class community_detail extends AppCompatActivity {
+public class community_detail_4 extends AppCompatActivity {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.  HH:mm");
     boolean click = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_community_detail);
+        setContentView(R.layout.activity_community_detail_4);
         Button LikeButton = (Button) findViewById(R.id.LikeButton);
         Button ChatButton = (Button) findViewById(R.id.ChatButton);
 

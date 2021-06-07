@@ -8,12 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Date;
 
-public class ListBoardAdapter extends BaseAdapter {
-    private ArrayList<ListBoardItem> listViewItemList = new ArrayList<ListBoardItem>();
+public class ListBoardAdapter_4 extends BaseAdapter {
+    private ArrayList<ListBoardItem_4> listViewItemList = new ArrayList<ListBoardItem_4>();
 
-    public ListBoardAdapter(){
+    public ListBoardAdapter_4(){
 
     }
 
@@ -38,7 +37,7 @@ public class ListBoardAdapter extends BaseAdapter {
 
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.board_item, parent, false);
+            convertView = inflater.inflate(R.layout.board_item_4, parent, false);
         }
 
         TextView titleTextView = (TextView)convertView.findViewById(R.id.textView1);   //제목
@@ -47,7 +46,7 @@ public class ListBoardAdapter extends BaseAdapter {
         TextView likeTextView = (TextView)convertView.findViewById(R.id.likeNum);
         TextView chatTextView = (TextView)convertView.findViewById(R.id.chatNum);
 
-        ListBoardItem listViewItem = listViewItemList.get(position);
+        ListBoardItem_4 listViewItem = listViewItemList.get(position);
 
         String time = listViewItem.getDate().substring(13)+"   |";
 
@@ -62,7 +61,7 @@ public class ListBoardAdapter extends BaseAdapter {
     }
 
     public void addItem(String title, String content, String name, String category, String date, Integer like, Integer comment){
-        ListBoardItem item = new ListBoardItem();
+        ListBoardItem_4 item = new ListBoardItem_4();
 
         item.setTitle(title);
         item.setDate(date);
