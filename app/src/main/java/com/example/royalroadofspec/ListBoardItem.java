@@ -32,58 +32,48 @@ public class ListBoardItem {
     public String getTitle(){
         return title;
     }
-
-    public void setTitle(String title){
-        this.title = title;
-    }
-
     public String getContent(){
         return content;
     }
-
-    public void setContent(String content){
-        this.content = content;
-    }
-
     public String getUserName(){
         return userName;
     }
-
-    public void setUserName(String userName){
-        this.userName = userName;
-    }
-
     public String getCategory(){
         return category;
     }
-
-    public void setCategory(String category){
-        this.category = category;
-    }
-
     public String getDate(){
         return date;
     }
-
-    public void setDate(String date){
-        this.date = date;
-    }
-
     public Integer getLikes(){
         return likes;
     }
-
-    public void setLikes(Integer likes){
-        this.likes = likes;
-    }
-
     public Integer getComments(){
         return comments;
     }
 
+
+    public void setTitle(String title){
+        this.title = title;
+    }
+    public void setContent(String content){
+        this.content = content;
+    }
+    public void setUserName(String userName){
+        this.userName = userName;
+    }
+    public void setCategory(String category){
+        this.category = category;
+    }
+    public void setDate(String date){
+        this.date = date;
+    }
+    public void setLikes(Integer likes){
+        this.likes = likes;
+    }
     public void setComments(Integer comments){
         this.comments = comments;
     }
+
 
     @Override
     public String toString() {
