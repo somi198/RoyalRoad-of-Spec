@@ -81,15 +81,6 @@ public class community_space_4 extends AppCompatActivity {
         readBoardList();
 
 
-//        InfoAdapter.addItem("S기업 현직자가 말해주는 꿀팁 마구마구마구 대방출",date, "공부왕", "4", "8");
-//        InfoAdapter.addItem("면접 유경험자 해주는 조언",date,"abc123", "3", "2");
-//        InfoAdapter.addItem("실무에서는 어떤 일?",date,"user3", "2", "0");
-//
-//        QaAdapter.addItem("정보처리기사 자격증은 어떻게 따나요?",date, "컴공생", "3", "0");
-//        QaAdapter.addItem("공부하는 방법을 모르겠습니다.",date,"자격증초보", "1", "5");
-//        QaAdapter.addItem("학원 추천받아요",date,"somi", "2", "1");
-
-
         InfoView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -196,10 +187,7 @@ public class community_space_4 extends AppCompatActivity {
             }
         });
     }
-    protected void onDestroy() {
-        super.onDestroy();
-        mDatabase.removeEventListener(mChild);
-    }
+
 
     private void readBoard(ListBoardAdapter InfoAdapter, ListBoardAdapter QaAdapter){
 

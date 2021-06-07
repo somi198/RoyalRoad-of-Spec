@@ -61,8 +61,8 @@ public class write_space extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 category = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(),category+
-                        "이 선택되었습니다.", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),category+
+//                        "이 선택되었습니다.", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -129,11 +129,10 @@ public class write_space extends AppCompatActivity {
                 result.put("comments", comments);
 
                 writeNewBoard(getBoardTitle, getBoardContent, getBoardUserName, category, current, likes, comments);
+
+                Intent intent = new Intent(getApplicationContext(), community_space_4.class);
+                startActivity(intent);
             }
-
-            Intent intent = new Intent(getApplicationContext(), community_space_4.class);
-            startActivity(intent);
-
         }
         return super.onOptionsItemSelected(item);
     }
