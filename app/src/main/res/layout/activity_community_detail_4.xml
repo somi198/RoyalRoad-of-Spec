@@ -72,8 +72,6 @@
                     android:text="2021.06.05  16:04"
                     android:textSize="11dp"
                     android:textColor="#778899"/>
-
-
             </RelativeLayout>
 
             <View
@@ -119,7 +117,6 @@
                     app:backgroundTint="@color/hufs" />
 
             </RelativeLayout>
-
 
             <View
                 style="@style/Divider"

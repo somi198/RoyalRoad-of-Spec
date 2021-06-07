@@ -39,7 +39,6 @@ public class write_space_4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write_space_4);
-
         title = findViewById(R.id.BoardTitle);
         content = findViewById(R.id.BoardContent);
         userName = findViewById(R.id.UserName);

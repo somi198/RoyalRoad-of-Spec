@@ -41,7 +41,6 @@ public class community_space_4 extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
 
-
         FloatingActionButton writeButton = (FloatingActionButton) findViewById(R.id.fab);
 
         // 탭 매뉴 만들기

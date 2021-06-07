@@ -21,25 +21,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoyalRoadOfSpec">
 
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-
-
         <activity android:name=".community_detail_4"
             android:parentActivityName=".community_space_4"/>
         <activity android:name=".write_space_4"
             android:parentActivityName=".community_space_4"/>
+
         <activity android:name=".community_space_4" />
         <activity
             android:name=".details_of_selected_field_3"
             android:parentActivityName=".selecting_subfield_content_2" />
-        <activity android:name=".Preparing_3" />
+
+      <activity android:name=".Preparing_3" />
         <activity
             android:name=".ITListView_2"
             android:parentActivityName=".selecting_occupation_1" />
@@ -49,6 +41,8 @@
         <activity
             android:name=".FinanceListView_2"
             android:parentActivityName=".selecting_occupation_1" />
+
+        <activity android:name=".InfoAboutSpec_5"></activity>
         <activity
             android:name=".selecting_subfield_content_2"
             android:parentActivityName=".selecting_occupation_1" />

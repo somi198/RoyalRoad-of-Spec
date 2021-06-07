@@ -67,7 +67,7 @@ public class selecting_occupation_1 extends AppCompatActivity {
     }
 
     public void EtcClicked(View v){ //community 버튼 클릭 시 community 화면으로 이동
-        Intent myIntent = new Intent(getApplicationContext(), Preparing_3.class); //page5로 변경
+        Intent myIntent = new Intent(getApplicationContext(), InfoAboutSpec_5.class); //page5로 변경
         startActivity(myIntent);
         //Toast.makeText(getApplicationContext(), "이동", Toast.LENGTH_LONG).show();
     }

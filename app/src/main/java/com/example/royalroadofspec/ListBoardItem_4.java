@@ -1,10 +1,10 @@
 package com.example.royalroadofspec;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class ListBoardItem_4 {
     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+
 
     private String title;
     private String userName;
