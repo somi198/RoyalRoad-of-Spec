@@ -49,24 +49,28 @@ public class ListBoardAdapter extends BaseAdapter {
 
         ListBoardItem listViewItem = listViewItemList.get(position);
 
+        String time = listViewItem.getDate().substring(13)+"   |";
+
 
         titleTextView.setText(listViewItem.getTitle());
-        timeTextView.setText(listViewItem.getTime());
-        nameTextView.setText(listViewItem.getName());
-        likeTextView.setText(listViewItem.getLike());
-        chatTextView.setText(listViewItem.getChat());
+        timeTextView.setText(time);
+        nameTextView.setText(listViewItem.getUserName());
+        likeTextView.setText(String.valueOf(listViewItem.getLikes()));
+        chatTextView.setText(String.valueOf(listViewItem.getComments()));
 
         return convertView;
     }
 
-    public void addItem(String title, Date date, String name, String like, String chat){
+    public void addItem(String title, String content, String name, String category, String date, Integer like, Integer comment){
         ListBoardItem item = new ListBoardItem();
 
         item.setTitle(title);
-        item.setTime(date);
-        item.setName(name);
-        item.setLike(like);
-        item.setChat(chat);
+        item.setDate(date);
+        item.setUserName(name);
+        item.setLikes(like);
+        item.setComments(comment);
+        item.setCategory(category);
+        item.setContent(content);
 
         listViewItemList.add(item);
     }

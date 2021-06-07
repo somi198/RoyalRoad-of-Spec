@@ -16,7 +16,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/detail_board"
+                android:id="@+id/detail_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -73,15 +73,6 @@
                     android:textSize="11dp"
                     android:textColor="#778899"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/detail_name"
-                    android:layout_toRightOf="@id/detail_date"
-                    android:layout_marginLeft="15dp"
-                    android:text="조회 3"
-                    android:textSize="11dp"
-                    android:textColor="#778899"/>
 
             </RelativeLayout>
 
@@ -93,13 +84,14 @@
                 android:layout_marginBottom="20dp" />
 
             <TextView
-                android:id="@+id/detail"
+                android:id="@+id/detail_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginBottom="50dp"
                 android:text="세부 내용"
-                android:textSize="15dp"/>
+                android:textSize="15dp"
+                android:textColor="@color/black"/>
 
 
             <RelativeLayout

@@ -3,6 +3,7 @@ package com.example.royalroadofspec;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -30,7 +31,7 @@ import java.util.HashMap;
 
 public class write_space extends AppCompatActivity {
 
-    SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
+    SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy.MM.dd   hh:mm");
     EditText title, content, userName;
     String category;
     String current;
@@ -71,7 +72,7 @@ public class write_space extends AppCompatActivity {
     }
 
     private void writeNewBoard(String title, String content, String userName, String category, String date, Integer likes, Integer comments){
-        Board board = new Board(title, content, userName, category, date, likes, comments);
+        ListBoardItem board = new ListBoardItem(title, content, userName, category, date, likes, comments);
 
         mDatabase.child("boards").push().setValue(board)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -129,6 +130,10 @@ public class write_space extends AppCompatActivity {
 
                 writeNewBoard(getBoardTitle, getBoardContent, getBoardUserName, category, current, likes, comments);
             }
+
+            Intent intent = new Intent(getApplicationContext(), community_space_4.class);
+            startActivity(intent);
+
         }
         return super.onOptionsItemSelected(item);
     }

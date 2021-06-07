@@ -6,29 +6,95 @@ import java.util.Date;
 public class ListBoardItem {
     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 
-    private String titleStr;
-    private String nameStr;
-    private String likeStr;
-    private String chatStr;
-    private String timeStr;
+    private String title;
+    private String userName;
+    private String content;
+    private String category;
+    private String date;
+    private Integer likes;
+    private Integer comments;
 
-    public void setTitle(String title){
-        titleStr = title;
+    public ListBoardItem(){
+
     }
-    public void setName(String name){
-        nameStr = name;
+
+    public ListBoardItem(String title, String content, String userName, String category, String date, Integer likes, Integer comments){
+        this.title = title;
+        this.content = content;
+        this.userName = userName;
+        this.category = category;
+        this.date = date;
+        this.likes = likes;
+        this.comments = comments;
     }
-    public void setLike(String like) {likeStr = like;}
-    public void setChat(String chat) {chatStr = chat;}
-    public void setTime(Date date) {timeStr = sdf.format(date);}
+
 
     public String getTitle(){
-        return this.titleStr;
+        return title;
     }
-    public String getName(){
-        return this.nameStr;
+
+    public void setTitle(String title){
+        this.title = title;
     }
-    public String getLike() { return this.likeStr;}
-    public String getChat() {return this.chatStr;}
-    public String getTime() {return this.timeStr + "   |";}
+
+    public String getContent(){
+        return content;
+    }
+
+    public void setContent(String content){
+        this.content = content;
+    }
+
+    public String getUserName(){
+        return userName;
+    }
+
+    public void setUserName(String userName){
+        this.userName = userName;
+    }
+
+    public String getCategory(){
+        return category;
+    }
+
+    public void setCategory(String category){
+        this.category = category;
+    }
+
+    public String getDate(){
+        return date;
+    }
+
+    public void setDate(String date){
+        this.date = date;
+    }
+
+    public Integer getLikes(){
+        return likes;
+    }
+
+    public void setLikes(Integer likes){
+        this.likes = likes;
+    }
+
+    public Integer getComments(){
+        return comments;
+    }
+
+    public void setComments(Integer comments){
+        this.comments = comments;
+    }
+
+    @Override
+    public String toString() {
+        return "Board{" +
+                "title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", userName='" + userName + '\'' +
+                ", category='" + category + '\'' +
+                ", date='" + date + '\'' +
+                ", likes='" + likes + '\'' +
+                ", comments='" + comments + '\'' +
+                '}';
+    }
 }
