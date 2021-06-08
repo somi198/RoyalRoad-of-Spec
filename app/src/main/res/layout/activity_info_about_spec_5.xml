@@ -38,78 +38,73 @@
                     <Button
                         android:id="@+id/KoreaEmploymentSiteGo"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:text="고용노동부"
                         android:textColor="@color/spec"
-                        app:backgroundTint="#00ff0000"
-                        android:background="@drawable/koreaemployment"
-                        android:onClick="KoreaEmploymentSite_go"/>
+                        android:backgroundTint="#00ff0000"
+                        android:onClick="KoreaEmploymentSite_go"
+                         />
                     <TextView
                         android:id="@+id/KoreaEmploymentInfoSite"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_gravity="start"
                         android:fontFamily="@font/nanumgodic"
-                        android:text=" ^ click => 고용에 대한 모든 것.\n 취업지원부터 고용보호까지 모든 정보 총망라한 고용노동부 사이트"/>
+                        android:text=" ^ Click => 고용에 대한 모든 것.\n 취업지원부터 고용보호까지 모든 정보 총망라한 고용노동부 사이트"/>
 
                     <Button
                         android:id="@+id/employmentSite1Go"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:text="saramin"
                         android:textColor="@color/spec"
-                        app:backgroundTint="#00ff0000"
-                        android:background="@drawable/saramin"
+                        android:backgroundTint="#00ff0000"
                         android:onClick="employmentSite1_go"/>
                     <Button
                         android:id="@+id/employmentSite2Go"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:text="jobkorea"
                         android:textColor="@color/spec"
-                        app:backgroundTint="#00ff0000"
-                        android:background="@drawable/jobkorea"
+                        android:backgroundTint="#00ff0000"
                         android:onClick="employmentSite2_go"/>
                     <TextView
                         android:id="@+id/employmentSite"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:fontFamily="@font/nanumgodic"
-                        android:text=" ^ click => 실시간으로 올라오는 각종 취업 공고 사이트"/>
+                        android:text=" ^ Click => 실시간으로 올라오는 각종 취업 공고 사이트"/>
 
                     <Button
                         android:id="@+id/employmentCommunity1Go"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:text="취업 뽀개기"
                         android:textColor="@color/spec"
-                        app:backgroundTint="#00ff0000"
-                        android:background="@drawable/breakjob"
-                        android:onClick="employmentCommunity1_go"/>
+                        android:backgroundTint="#00ff0000"
+                        android:onClick="employmentCommunity1_go" />
                     <Button
                         android:id="@+id/employmentCommunity2Go"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:text="specup"
                         android:textColor="@color/spec"
-                        app:backgroundTint="#00ff0000"
-                        android:background="@drawable/specup"
+                        android:backgroundTint="#00ff0000"
                         android:onClick="employmentCommunity2_go"/>
                     <Button
                         android:id="@+id/employmentCommunity3Go"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:text="독취사"
                         android:textColor="@color/spec"
-                        app:backgroundTint="#00ff0000"
-                        android:background="@drawable/dokchi"
+                        android:backgroundTint="#00ff0000"
                         android:onClick="employmentCommunity3_go"/>
                     <TextView
                         android:id="@+id/employmentCommunity"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:fontFamily="@font/nanumgodic"
-                        android:text=" ^ click => 취업 정보 커뮤니티"/>
+                        android:text=" ^ Click => 취업 정보 커뮤니티(가입 필요)"/>
 
                 </LinearLayout>
 
@@ -122,36 +117,33 @@
                     <Button
                         android:id="@+id/specSite1Go"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:text="linkareer"
                         android:textColor="@color/spec"
-                        app:backgroundTint="#00ff0000"
-                        android:background="@drawable/linkareer"
+                        android:backgroundTint="#00ff0000"
                         android:onClick="specInfoSite1_go"/>
                     <Button
                         android:id="@+id/specSite2Go"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:text="campuspick"
                         android:textColor="@color/spec"
-                        app:backgroundTint="#00ff0000"
-                        android:background="@drawable/campuspick"
+                        android:backgroundTint="#00ff0000"
                         android:onClick="specInfoSite2_go"/>
                     <Button
                         android:id="@+id/specSite3Go"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:text="wevity"
                         android:textColor="@color/spec"
-                        app:backgroundTint="#00ff0000"
-                        android:background="@drawable/wevity"
+                        android:backgroundTint="#00ff0000"
                         android:onClick="specInfoSite3_go"/>
                     <TextView
                         android:id="@+id/specSite"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:fontFamily="@font/nanumgodic"
-                        android:text=" ^ click => 공모전과 대외활동으로 쌓는 스펙"/>
+                        android:text=" ^ Click => 공모전과 대외활동으로 쌓는 스펙"/>
 
                 </LinearLayout>
             </FrameLayout>
