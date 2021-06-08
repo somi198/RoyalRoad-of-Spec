@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoyalRoadOfSpec">
         <activity android:name=".InfoAboutSpec_5"
-            android:parentActivityName=".selecting_occupation_1"/>
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".community_detail_4" />
         <activity android:name=".write_space_4" />
         <activity android:name=".community_space_4" />
