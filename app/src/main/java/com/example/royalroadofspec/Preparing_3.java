@@ -14,14 +14,5 @@ public class Preparing_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.preparing_page_3);
 
-        Button button = (Button) findViewById(R.id.newActivity);
-        button.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }
