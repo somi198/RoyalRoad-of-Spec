@@ -1,93 +1,82 @@
 package com.example.royalroadofspec;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TabHost;
-import android.app.TabActivity;
 
-@SuppressWarnings("deprecation")
-
-public class InfoAboutSpec_5 extends TabActivity {
+public class InfoAboutSpec_5 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_about_spec_5);
 
-        Button button = (Button) findViewById(R.id.newActivity);
-        button.setOnClickListener(new View.OnClickListener() {
+        TabHost tabHost = (TabHost) findViewById(R.id.tabhost);
+        tabHost.setup();
 
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), community_space_4.class);
-                startActivity(intent);
-            }
-        });
+        TabHost.TabSpec tabjob = tabHost.newTabSpec("EMPLOYMENT");
+        tabjob.setContent(R.id.tab_job);
+        tabjob.setIndicator("취업 정보");
+        tabHost.addTab(tabjob);
 
-        TabHost tabHost = getTabHost();
-
-        TabHost.TabSpec tabEmploy = tabHost.newTabSpec("EMPLOYMENT").setIndicator("취업");
-        tabEmploy.setContent(R.id.employmentTab);
-        tabHost.addTab(tabEmploy);
-
-        TabHost.TabSpec tabSpec = tabHost.newTabSpec("SPEC").setIndicator("스펙");
-        tabSpec.setContent(R.id.specTab);
-        tabHost.addTab(tabSpec);
+        TabHost.TabSpec tabspec = tabHost.newTabSpec("SPEC");
+        tabspec.setContent(R.id.tab_spec);
+        tabspec.setIndicator("스펙 정보");
+        tabHost.addTab(tabspec);
 
         tabHost.setCurrentTab(0);
-
     }
 
-    public void KoreaEmploymentSiteGo(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.moel.go.kr/index.do"));
+    public void KoreaEmploymentSite_go(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.moel.go.kr/index.do"));
         startActivity(intent);
     }
 
-    public void employmentSite1Go(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.saramin.co.kr/zf_user/"));
+
+    public void employmentSite1_go(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.saramin.co.kr/zf_user/"));
         startActivity(intent);
     }
 
-    public void employmentSite2Go(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.work.go.kr/seekWantedMain.do"));
+    public void employmentSite2_go(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.jobkorea.co.kr/"));
         startActivity(intent);
     }
 
-    public void employmentSite3Go(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.jobkorea.co.kr/"));
+
+    public void employmentCommunity1_go(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://m.cafe.daum.net/breakjob"));
         startActivity(intent);
     }
 
-    public void employmentInfoCommunity1Go(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.cafe.daum.net/breakjob"));
+    public void employmentCommunity2_go(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://m.cafe.naver.com/specup"));
         startActivity(intent);
     }
 
-    public void employmentInfoCommunity2Go(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://cafe.naver.com/dokchi"));
+    public void employmentCommunity3_go(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://cafe.naver.com/dokchi"));
         startActivity(intent);
     }
 
-    public void employmentInfoCommunity3Go(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.cafe.naver.com/specup"));
+
+    public void specInfoSite1_go(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://linkareer.com/"));
         startActivity(intent);
     }
 
-    public void specInfoSite1Go(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://linkareer.com/"));
+    public void specInfoSite2_go(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.campuspick.com/"));
         startActivity(intent);
     }
 
-    public void specInfoSite2Go(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.campuspick.com/"));
-        startActivity(intent);
-    }
-
-    public void specInfoSite3Go(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wevity.com/"));
+    public void specInfoSite3_go(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.wevity.com/"));
         startActivity(intent);
     }
 }
