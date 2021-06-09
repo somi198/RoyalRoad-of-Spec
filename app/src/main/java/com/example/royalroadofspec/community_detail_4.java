@@ -26,13 +26,17 @@ public class community_detail_4 extends AppCompatActivity {
         Intent intent = getIntent();
 
         TextView title = (TextView) findViewById(R.id.detail_title);
+        TextView content = (TextView) findViewById(R.id.detail_content);
         TextView name = (TextView) findViewById(R.id.detail_name);
-        TextView board = (TextView) findViewById(R.id.detail_board);
+        TextView category = (TextView) findViewById(R.id.detail_category);
+        TextView date = (TextView) findViewById(R.id.detail_date);
 
 
         title.setText(intent.getStringExtra("title"));
-        name.setText(intent.getStringExtra("name"));
-        board.setText(intent.getStringExtra("board"));
+        content.setText(intent.getStringExtra("content"));
+        name.setText(intent.getStringExtra("userName"));
+        category.setText(intent.getStringExtra("category"));
+        date.setText(intent.getStringExtra("date"));
 
 
         LikeButton.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +51,14 @@ public class community_detail_4 extends AppCompatActivity {
                     LikeButton.setBackground(emptyheart);
                     click = false;
                 }
+            }
+        });
+
+        ChatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+
             }
         });
 

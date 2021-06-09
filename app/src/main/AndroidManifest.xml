@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.royalroadofspec">
+    package="com.example.royalroadofspec"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
+
+    <dist:module dist:instant="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -9,8 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoyalRoadOfSpec">
-        <activity android:name=".community_detail_4"></activity>
-        <activity android:name=".write_space_4" />
+        <activity android:name=".InfoAboutSpec_5"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".community_detail_4"
+            android:parentActivityName=".community_space_4"/>
+        <activity android:name=".write_space_4"
+            android:parentActivityName=".community_space_4"/>
+
         <activity android:name=".community_space_4" />
         <activity
             android:name=".details_of_selected_field_3_banker"
@@ -27,13 +38,13 @@
             android:parentActivityName=".selecting_occupation_1"/>
         <activity
             android:name=".ITListView_2"
-            android:parentActivityName=".selecting_occupation_1"/>
+            android:parentActivityName=".selecting_occupation_1" />
         <activity
             android:name=".OfficerListView_2"
-            android:parentActivityName=".selecting_occupation_1"/>
+            android:parentActivityName=".selecting_occupation_1" />
         <activity
             android:name=".FinanceListView_2"
-            android:parentActivityName=".selecting_occupation_1"/>
+            android:parentActivityName=".selecting_occupation_1" />
         <activity
             android:name=".selecting_occupation_1"
             android:parentActivityName=".MainActivity"/>
@@ -45,5 +56,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
