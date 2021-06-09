@@ -1,9 +1,11 @@
 package com.example.royalroadofspec;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,18 +14,31 @@ import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.Toast;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.Date;
+
 
 @SuppressWarnings("deprecation")
 
 public class community_space_4 extends AppCompatActivity {
 
+    private DatabaseReference mDatabase;
+    private FirebaseDatabase mFirebase;
+    private ChildEventListener mChild;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_community_space_4);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
 
         FloatingActionButton writeButton = (FloatingActionButton) findViewById(R.id.fab);
 
@@ -41,9 +56,6 @@ public class community_space_4 extends AppCompatActivity {
         ts2.setIndicator("질문게시판");
         tabHost.addTab(ts2);
 
-        //게시판 글 추가
-        long now = System.currentTimeMillis();
-        Date date = new Date(now);
 
         //ListView
         ListView InfoView;
@@ -59,14 +71,8 @@ public class community_space_4 extends AppCompatActivity {
         InfoView.setAdapter(InfoAdapter);
         QaView.setAdapter(QaAdapter);
 
-        InfoAdapter.addItem("S기업 현직자가 말해주는 꿀팁 마구마구마구 대방출",date, "공부왕", "4", "8");
-        InfoAdapter.addItem("면접 유경험자 해주는 조언",date,"abc123", "3", "2");
-        InfoAdapter.addItem("실무에서는 어떤 일?",date,"user3", "2", "0");
-
-        QaAdapter.addItem("정보처리기사 자격증은 어떻게 따나요?",date, "컴공생", "3", "0");
-        QaAdapter.addItem("공부하는 방법을 모르겠습니다.",date,"자격증초보", "1", "5");
-        QaAdapter.addItem("학원 추천받아요",date,"somi", "2", "1");
-
+        readBoard(InfoAdapter, QaAdapter);
+        readBoardList();
 
 
         InfoView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -76,20 +82,24 @@ public class community_space_4 extends AppCompatActivity {
                 ListBoardItem_4 item = (ListBoardItem_4) parent.getItemAtPosition(position);
 
                 String titleStr = item.getTitle();
-                String timeStr = item.getTime();
-                String nameStr = item.getName();
-                String likeStr = item.getLike();
-                String chatStr = item.getChat();
+                String contentStr = item.getContent();
+                String nameStr = item.getUserName();
+                String categoryStr = item.getCategory();
+                String dateStr = item.getDate();
+                Integer likeStr = item.getLikes();
+                Integer chatStr = item.getComments();
 
 
                 Intent intent = new Intent(getApplicationContext(), community_detail_4.class);
 
                 intent.putExtra("title", titleStr);
-                intent.putExtra("time", timeStr);
-                intent.putExtra("name", nameStr);
-                intent.putExtra("like", likeStr);
-                intent.putExtra("chat", chatStr);
-                intent.putExtra("board", "정보게시판 >");
+                intent.putExtra("content", contentStr);
+                intent.putExtra("userName", nameStr);
+                intent.putExtra("category", categoryStr+" >");
+                intent.putExtra("date", dateStr);
+                intent.putExtra("likes", likeStr);
+                intent.putExtra("comments", chatStr);
+
                 startActivity(intent);
 
             }
@@ -101,20 +111,24 @@ public class community_space_4 extends AppCompatActivity {
                 ListBoardItem_4 item = (ListBoardItem_4) parent.getItemAtPosition(position);
 
                 String titleStr = item.getTitle();
-                String timeStr = item.getTime();
-                String nameStr = item.getName();
-                String likeStr = item.getLike();
-                String chatStr = item.getChat();
+                String contentStr = item.getContent();
+                String nameStr = item.getUserName();
+                String categoryStr = item.getCategory();
+                String dateStr = item.getDate();
+                Integer likeStr = item.getLikes();
+                Integer chatStr = item.getComments();
 
 
                 Intent intent = new Intent(getApplicationContext(), community_detail_4.class);
 
                 intent.putExtra("title", titleStr);
-                intent.putExtra("time", timeStr);
-                intent.putExtra("name", nameStr);
-                intent.putExtra("like", likeStr);
-                intent.putExtra("chat", chatStr);
-                intent.putExtra("board", "질문게시판 >");
+                intent.putExtra("content", contentStr);
+                intent.putExtra("userName", nameStr);
+                intent.putExtra("category", categoryStr+" >");
+                intent.putExtra("date", dateStr);
+                intent.putExtra("likes", likeStr);
+                intent.putExtra("comments", chatStr);
+
                 startActivity(intent);
             }
         });
@@ -131,6 +145,80 @@ public class community_space_4 extends AppCompatActivity {
         });
 
     }
+
+    private void readBoardList(){
+//        mFirebase = FirebaseDatabase.getInstance();
+//        mDatabase = mFirebase.getReference("log");
+//        mDatabase.child("log").setValue("check")
+
+        mDatabase.addChildEventListener(new ChildEventListener() {
+
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                Log.d("FirebaseData","onChildAdded:"+ snapshot.getValue());
+//                Board board = snapshot.getValue(Board.class);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                Log.d("FirebaseData","onChildChanged:" + snapshot.getKey());
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+
+    private void readBoard(ListBoardAdapter_4 InfoAdapter, ListBoardAdapter_4 QaAdapter){
+
+        mDatabase.child("boards").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot boardSnapshot : snapshot.getChildren()
+                ){
+
+                    String titleStr = boardSnapshot.child("title").getValue(String.class);
+                    String nameStr = boardSnapshot.child("userName").getValue(String.class);
+                    String contentStr = boardSnapshot.child("content").getValue(String.class);
+                    String categoryStr = boardSnapshot.child("category").getValue(String.class);
+                    String dateStr = boardSnapshot.child("date").getValue(String.class);
+                    Integer likeStr = boardSnapshot.child("likes").getValue(Integer.class);
+                    Integer commentStr = boardSnapshot.child("comments").getValue(Integer.class);
+
+                    if(categoryStr.equals("정보게시판")){
+                        InfoAdapter.addItem(titleStr, contentStr, nameStr, categoryStr, dateStr, likeStr, commentStr);
+                    }
+                    else if(categoryStr.equals("질문게시판")){
+                        QaAdapter.addItem(titleStr, contentStr, nameStr, categoryStr, dateStr, likeStr, commentStr);
+                    }
+                    Log.i("TAG: value is ",titleStr+"/"+nameStr);
+                }
+                InfoAdapter.notifyDataSetChanged();
+                QaAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.w("FireBaseData", "loadPost:onCancelled", error.toException());
+
+            }
+        });
+    }
+
 
     // Action Bar에 메뉴를 생성한다
     @Override
