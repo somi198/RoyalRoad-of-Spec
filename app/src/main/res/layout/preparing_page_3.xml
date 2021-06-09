@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,29 +9,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#152C46"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:layout_gravity="center"
+        android:paddingLeft="130dp"
         android:text="준비중입니다"
-        android:textColor="#F6B352"
+        android:textColor="#152C46"
         android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="150dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/newActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="처음으로 이동"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932"
         />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
