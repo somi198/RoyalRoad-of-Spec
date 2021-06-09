@@ -13,26 +13,15 @@ import android.app.TabActivity;
 
 @SuppressWarnings("deprecation")
 
-public class details_of_selected_field_3 extends TabActivity {
+public class details_of_selected_field_3 extends AppCompatActivity {
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_details_of_selected_field3);
 
-
-            Button button = (Button) findViewById(R.id.newActivity);
-            button.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), ITListView_2.class);
-                    startActivity(intent);
-                }
-            });
-
-
-            TabHost tabHost = getTabHost();
+            TabHost tabHost = (TabHost) findViewById(R.id.tabhost);
+            tabHost.setup();
 
 
             TabHost.TabSpec tabSpecSong = tabHost.newTabSpec("PRESENT").setIndicator("추천 커리큘럼");

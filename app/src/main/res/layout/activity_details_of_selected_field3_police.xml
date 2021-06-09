@@ -10,59 +10,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@android:id/tabhost"
-        tools:context=".MainActivity"
+        android:id="@+id/tabhost"
+        tools:context=".details_of_selected_field_3_police"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <com.google.android.material.appbar.AppBarLayout
-                android:id="@+id/app_bar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/Theme.TabDetails.AppBarOverlay">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <androidx.appcompat.widget.Toolbar
-                        android:id="@+id/toolbar"
-                        android:layout_width="match_parent"
-                        android:layout_height="?attr/actionBarSize"
-                        app:popupTheme="@style/Theme.TabDetails.PopupOverlay" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/newActivity"
-                            android:layout_width="61dp"
-                            android:layout_height="match_parent"
-                            android:text="←" />
-
-                        <TextView
-                            android:id="@+id/textView6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="@font/nanumgodic"
-                            android:text="경찰 공무원"
-                            android:layout_gravity="center"
-                            android:textSize="25dp" />
-                    </LinearLayout>
-
-                </FrameLayout>
-
-            </com.google.android.material.appbar.AppBarLayout>
 
             <TabWidget
                 android:id="@android:id/tabs"
@@ -130,14 +85,14 @@
                         android:background="@color/yellow"
                         android:text="자격증(↓CLICK)" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/button12"
                         android:layout_width="match_parent"
                         android:layout_height="81dp"
                         android:background="@drawable/_20210606_140715"
                         android:onClick="botton10" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/button13"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
@@ -160,7 +115,7 @@
                         android:background="@color/yellow"
                         android:text="온라인 강의 추천 사이트(↓CLICK)" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/button1"
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
@@ -176,14 +131,14 @@
                         android:background="@color/yellow"
                         android:text="오프라인 강의 추천 사이트(↓CLICK)" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/button2"
                         android:layout_width="match_parent"
                         android:layout_height="85dp"
                         android:background="@drawable/_20210606_140514"
                         android:onClick="botton2" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/button4"
                         android:layout_width="match_parent"
                         android:layout_height="85dp"
@@ -204,21 +159,21 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <Button
+                        <ImageButton
                             android:id="@+id/button5"
                             android:layout_width="136dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/_20210606_140832"
                             android:onClick="botton4" />
 
-                        <Button
+                        <ImageButton
                             android:id="@+id/button7"
                             android:layout_width="136dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/_20210606_140851"
                             android:onClick="botton5" />
 
-                        <Button
+                        <ImageButton
                             android:id="@+id/button8"
                             android:layout_width="136dp"
                             android:layout_height="wrap_content"
@@ -243,14 +198,14 @@
                         android:background="@color/yellow"
                         android:text="대외활동(↓CLICK)" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/button9"
                         android:layout_width="match_parent"
                         android:layout_height="213dp"
                         android:background="@drawable/_20210606_141320"
                         android:onClick="botton7" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/button10"
                         android:layout_width="match_parent"
                         android:layout_height="105dp"
@@ -266,7 +221,7 @@
                         android:background="@color/yellow"
                         android:text="공모전(↓CLICK)" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/button11"
                         android:layout_width="match_parent"
                         android:layout_height="213dp"
