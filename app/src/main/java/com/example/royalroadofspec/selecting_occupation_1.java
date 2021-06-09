@@ -21,16 +21,6 @@ public class selecting_occupation_1 extends AppCompatActivity {
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, JOB_LIST);
 
-        Button button = (Button) findViewById(R.id.newActivity);
-        button.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), selecting_subfield_content_2.class);
-                startActivity(intent);
-            }
-        });
-
         ListView listView = (ListView) findViewById(R.id.listview1);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -38,20 +28,17 @@ public class selecting_occupation_1 extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String strText = (String) parent.getItemAtPosition(position);
                 //TODO
-                if(strText == JOB_LIST[0]){
+                if(strText == JOB_LIST[0]){     //IT 리스트 클릭시 이동
                     Intent myIntent = new Intent(getApplicationContext(), ITListView_2.class);
                     startActivity(myIntent);
-                    //Toast.makeText(getApplicationContext(), "IT 클릭", Toast.LENGTH_SHORT).show();
                 }
-                if(strText == JOB_LIST[1]){
+                if(strText == JOB_LIST[1]){     //공무원 리스트 클릭 시 이동
                     Intent myIntent = new Intent(getApplicationContext(), OfficerListView_2.class);
                     startActivity(myIntent);
-                    //Toast.makeText(getApplicationContext(), "공무원 클릭", Toast.LENGTH_SHORT).show();
                 }
-                if(strText == JOB_LIST[2]){
+                if(strText == JOB_LIST[2]){     //금융업 리스트 클릭 시 이동
                     Intent myIntent = new Intent(getApplicationContext(), FinanceListView_2.class);
                     startActivity(myIntent);
-                    //Toast.makeText(getApplicationContext(), "금융업 클릭", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -60,15 +47,5 @@ public class selecting_occupation_1 extends AppCompatActivity {
     }
 
 
-    public void CommunityClicked(View v){ //community 버튼 클릭 시 community 화면으로 이동
-        Intent myIntent = new Intent(getApplicationContext(), community_space_4.class);
-        startActivity(myIntent);
-        //Toast.makeText(getApplicationContext(), "이동", Toast.LENGTH_LONG).show();
-    }
 
-    public void EtcClicked(View v){ //community 버튼 클릭 시 community 화면으로 이동
-        Intent myIntent = new Intent(getApplicationContext(), InfoAboutSpec_5.class); //page5로 변경
-        startActivity(myIntent);
-        //Toast.makeText(getApplicationContext(), "이동", Toast.LENGTH_LONG).show();
-    }
 }

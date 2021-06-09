@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.royalroadofspec">
+    package="com.example.royalroadofspec"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
 
+<<<<<<< HEAD
+=======
+    <dist:module dist:instant="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+>>>>>>> 4f919d0914fb9a596a3c6427933d288151a13311
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,27 +17,55 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoyalRoadOfSpec">
+<<<<<<< HEAD
         <activity android:name=".community_detail_4"></activity>
         <activity android:name=".write_space_4" />
         <activity android:name=".community_space_4" />
         <activity
             android:name=".details_of_selected_field_3"
             android:parentActivityName=".selecting_subfield_content_2" />
+=======
+        <activity android:name=".InfoAboutSpec_5"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".community_detail_4"
+            android:parentActivityName=".community_space_4"/>
+        <activity android:name=".write_space_4"
+            android:parentActivityName=".community_space_4"/>
+
+        <activity android:name=".community_space_4" />
+        <activity
+            android:name=".details_of_selected_field_3_banker"
+            android:parentActivityName=".FinanceListView_2" />
+        <activity
+            android:name=".details_of_selected_field_3_police"
+            android:parentActivityName=".OfficerListView_2" />
+        <activity
+            android:name=".details_of_selected_field_3"
+            android:parentActivityName=".ITListView_2" />
+>>>>>>> 4f919d0914fb9a596a3c6427933d288151a13311
         <activity android:name=".InfoAboutSpec_5"></activity>
-        <activity android:name=".Preparing_3"></activity>
+        <activity
+            android:name=".Preparing_3"
+            android:parentActivityName=".selecting_occupation_1"/>
         <activity
             android:name=".ITListView_2"
-            android:parentActivityName=".selecting_occupation_1"/>
+            android:parentActivityName=".selecting_occupation_1" />
         <activity
             android:name=".OfficerListView_2"
-            android:parentActivityName=".selecting_occupation_1"/>
+            android:parentActivityName=".selecting_occupation_1" />
         <activity
             android:name=".FinanceListView_2"
+<<<<<<< HEAD
             android:parentActivityName=".selecting_occupation_1"/>
         <activity
             android:name=".selecting_subfield_content_2"
+=======
+>>>>>>> 4f919d0914fb9a596a3c6427933d288151a13311
             android:parentActivityName=".selecting_occupation_1" />
-        <activity android:name=".selecting_occupation_1" />
+        <activity
+            android:name=".selecting_occupation_1"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,5 +74,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
