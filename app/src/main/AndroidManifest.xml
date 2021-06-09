@@ -21,7 +21,6 @@
             android:parentActivityName=".community_space_4"/>
         <activity android:name=".write_space_4"
             android:parentActivityName=".community_space_4"/>
-
         <activity android:name=".community_space_4" />
         <activity
             android:name=".details_of_selected_field_3_banker"
@@ -32,7 +31,6 @@
         <activity
             android:name=".details_of_selected_field_3"
             android:parentActivityName=".ITListView_2" />
-        <activity android:name=".InfoAboutSpec_5"></activity>
         <activity
             android:name=".Preparing_3"
             android:parentActivityName=".selecting_occupation_1"/>
@@ -51,7 +49,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
