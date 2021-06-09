@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.royalroadofspec">
+    package="com.example.royalroadofspec"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the "MyLocation" functionality.
-    -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <!-- 인터넷 사용 권한 -->
+    <dist:module dist:instant="true" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -20,25 +14,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoyalRoadOfSpec">
+        <activity android:name=".InfoAboutSpec_5"
+            android:parentActivityName=".MainActivity"/>
 
         <activity android:name=".community_detail_4"
             android:parentActivityName=".community_space_4"/>
         <activity android:name=".write_space_4"
             android:parentActivityName=".community_space_4"/>
-
         <activity android:name=".community_space_4" />
-        <activity
-            android:name=".details_of_selected_field_3"
-            android:parentActivityName=".ITListView_2" />
         <activity
             android:name=".details_of_selected_field_3_banker"
             android:parentActivityName=".FinanceListView_2" />
         <activity
             android:name=".details_of_selected_field_3_police"
             android:parentActivityName=".OfficerListView_2" />
-
-
-      <activity android:name=".Preparing_3" />
+        <activity
+            android:name=".details_of_selected_field_3"
+            android:parentActivityName=".ITListView_2" />
+        <activity
+            android:name=".Preparing_3"
+            android:parentActivityName=".selecting_occupation_1"/>
         <activity
             android:name=".ITListView_2"
             android:parentActivityName=".selecting_occupation_1" />
@@ -48,16 +43,12 @@
         <activity
             android:name=".FinanceListView_2"
             android:parentActivityName=".selecting_occupation_1" />
-
-        <activity android:name=".InfoAboutSpec_5"></activity>
         <activity
-            android:name=".selecting_subfield_content_2"
-            android:parentActivityName=".selecting_occupation_1" />
-        <activity android:name=".selecting_occupation_1" />
+            android:name=".selecting_occupation_1"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
