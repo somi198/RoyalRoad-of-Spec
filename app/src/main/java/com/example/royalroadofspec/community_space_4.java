@@ -26,7 +26,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 @SuppressWarnings("deprecation")
 
-public class community_space_4 extends AppCompatActivity {
+public class
+community_space_4 extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
     private FirebaseDatabase mFirebase;

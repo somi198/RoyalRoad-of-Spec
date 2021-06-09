@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoyalRoadOfSpec">
         <activity android:name=".InfoAboutSpec_5"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName
+                =".MainActivity"/>
 
         <activity android:name=".community_detail_4"
             android:parentActivityName=".community_space_4"/>
