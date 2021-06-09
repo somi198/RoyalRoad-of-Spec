@@ -23,7 +23,7 @@ public class details_of_selected_field_3_police extends TabActivity {
 
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), community_space_4.class);
+                    Intent intent = new Intent(getApplicationContext(), OfficerListView_2.class);
                     startActivity(intent);
                 }
             });
