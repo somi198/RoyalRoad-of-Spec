@@ -29,7 +29,14 @@
         <activity android:name=".community_space_4" />
         <activity
             android:name=".details_of_selected_field_3"
-            android:parentActivityName=".selecting_subfield_content_2" />
+            android:parentActivityName=".ITListView_2" />
+        <activity
+            android:name=".details_of_selected_field_3_banker"
+            android:parentActivityName=".FinanceListView_2" />
+        <activity
+            android:name=".details_of_selected_field_3_police"
+            android:parentActivityName=".OfficerListView_2" />
+
 
       <activity android:name=".Preparing_3" />
         <activity
