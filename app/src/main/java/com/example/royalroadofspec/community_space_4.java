@@ -29,8 +29,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class community_space_4 extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
-    private FirebaseDatabase mFirebase;
-    private ChildEventListener mChild;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,13 +153,13 @@ public class community_space_4 extends AppCompatActivity {
 
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                Log.d("FirebaseData","onChildAdded:"+ snapshot.getValue());
+//                Log.d("FirebaseData","onChildAdded:"+ snapshot.getValue());
 //                Board board = snapshot.getValue(Board.class);
             }
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                Log.d("FirebaseData","onChildChanged:" + snapshot.getKey());
+//                Log.d("FirebaseData","onChildChanged:" + snapshot.getKey());
 
             }
 
@@ -205,7 +203,7 @@ public class community_space_4 extends AppCompatActivity {
                     else if(categoryStr.equals("질문게시판")){
                         QaAdapter.addItem(titleStr, contentStr, nameStr, categoryStr, dateStr, likeStr, commentStr);
                     }
-                    Log.i("TAG: value is ",titleStr+"/"+nameStr);
+//                    Log.i("TAG: value is ",titleStr+"/"+nameStr);
                 }
                 InfoAdapter.notifyDataSetChanged();
                 QaAdapter.notifyDataSetChanged();

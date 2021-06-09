@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "914533362253",
+    "project_id": "royal-road-of-spec",
+    "storage_bucket": "royal-road-of-spec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914533362253:android:f97df682f611a0472e8a04",
+        "android_client_info": {
+          "package_name": "com.example.royalroadofspec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914533362253-tpmdmf86jhqvgu5i15jcfivpnpbg5pb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCamqYFxqDCfOcz6mZtKepC02NIkQ4CHcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914533362253-tpmdmf86jhqvgu5i15jcfivpnpbg5pb0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
