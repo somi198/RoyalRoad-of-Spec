@@ -4,15 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="첫 화면"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="107dp" />
 
     <Button
         android:id="@+id/newActivity"
@@ -56,10 +49,9 @@
 
     <ImageView
         android:layout_width="400dp"
-        android:layout_height="200dp"
+        android:layout_height="400dp"
         android:src="@drawable/img"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="247dp"
+        app:layout_constraintBottom_toTopOf="@id/newActivity"
         tools:ignore="MissingConstraints" />
 
 
