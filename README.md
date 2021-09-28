@@ -25,3 +25,8 @@ using Android Studio / JAVA / Firebase Realtime Database
 
 # 게시글 작성 페이지
 ![스크린샷 2021-06-09 오후 7 00 04](https://user-images.githubusercontent.com/47052172/121356969-58e53780-c96c-11eb-82ec-fd1ea4198183.png)
+
+# 게시글 세부 내용 페이지
+<img width="310" alt="스크린샷" src="https://user-images.githubusercontent.com/44887886/135132198-e8461fc4-25f5-4e6b-9a65-4793307da305.png">
+
+
